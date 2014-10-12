@@ -25,13 +25,16 @@ http.createServer (req, res) ->
         do part.resume
         return
 
-      if part.filename? and part.name is 'file'
+      if part.filename? and (match = part.name.match(/file:[0-9a-zA-Z ]+(?:(\.[0-9a-zA-Z]+)*)$/))
+        [_, ext] = match
+        console.log ext
+
         if name? # Already uploaded one
           do part.resume
           return
 
         collection = "aeiuo"
-        name = (collection[Math.floor Math.random()*collection.length] for i in [1...5]).join ''
+        name = (collection[Math.floor Math.random()*collection.length] for i in [1...5]).join('') + ext
         console.log('got file named ', name);
         part.pipe(fs.createWriteStream('./direct/'+name))
 

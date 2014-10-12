@@ -55,7 +55,8 @@ module.exports = ->
               return
 
             formData = new FormData
-            formData.append 'file', $('#file')[0].files[0]
+            file = $('#file')[0].files[0]
+            formData.append 'file:' + file.name, file
 
             $.ajax
                 url: '/'
