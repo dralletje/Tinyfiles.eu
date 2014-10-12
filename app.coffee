@@ -50,6 +50,7 @@ http.createServer (req, res) ->
     form.parse(req)
 
   else if req.method is 'GET'
+    res.setHeader "Content-Type", "text/html"
     res.end(index)
 
   else
