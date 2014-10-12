@@ -3,7 +3,7 @@ module.exports = ->
   html ->
     head ->
       meta charset: 'utf-8'
-      title "#{@title or 'Home'} | A completely plausible website"
+      title "Tinyfiles - The biggest in being small"
       meta(name: 'description', content: @description) if @description?
 
       link rel: 'stylesheet', href: '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'
