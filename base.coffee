@@ -87,6 +87,7 @@ module.exports = ->
         p """
           Premium tiny file upload services!
           Upload files up to 50kB, which is equal to 50,000 bytes!
+
         """
 
         hr()
@@ -101,5 +102,9 @@ module.exports = ->
         hr()
 
         footer ->
-          # CoffeeScript comments. Not visible in the output document.
-          p 'By Michiel Dral (and a little bit of Cas de Reuver)'
+          p ->
+            text 'By '
+            a href: 'https://dral.eu/', 'Michiel Dral'
+            text ' (and a little bit of '
+            a href: 'https://cas.yt/', 'Cas de Reuver'
+            text ')'
