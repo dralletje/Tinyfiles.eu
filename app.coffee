@@ -3,6 +3,8 @@ http = require 'http'
 fs = require 'fs'
 multiparty = require 'multiparty'
 
+index = ck.compile(require './base')()
+
 http.createServer (req, res) ->
   if req.url isnt '/'
     res.end 'Nee, ga weg :\'\'\'\'\'\'('
@@ -45,13 +47,7 @@ http.createServer (req, res) ->
     form.parse(req)
 
   else if req.method is 'GET'
-    delete require.cache['/Users/Michiel/Projects/tinyfiles.eu/base.coffee']
-    try
-      base = ck.compile(require './base')
-      res.end(base())
-    catch e
-      console.log e
-      req.end "Kut Rikk, blijf weg."
+    res.end(index)
 
   else
     res.end 'WAT MOET JE?!'
