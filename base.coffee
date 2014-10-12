@@ -87,7 +87,8 @@ module.exports = ->
         p """
           Premium tiny file upload services!
           Upload files up to 50kB, which is equal to 50,000 bytes!
-
+          Now you can finally share your pieces of assembly code or
+          your public RSA keys.
         """
 
         hr()
