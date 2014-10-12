@@ -1,0 +1,15 @@
+{
+  "name": "tinyfiles.eu",
+  "version": "1.0.0",
+  "description": "Upload tiny files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michiel Dral <m.c.dral@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "coffeekup": "^0.3.1",
+    "multiparty": "^3.3.2"
+  }
+}
