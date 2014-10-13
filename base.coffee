@@ -103,6 +103,15 @@ module.exports = ->
 
         hr()
 
+        p ->
+          text 'Want more than 5kB (WHY?!), please consider '
+          a href: 'https://smallfiles.eu/', 'Smallfiles'
+          text """
+             because it can have files up to 5MB for free
+            (Where do they store all these files o.o)
+            and is made by a friend of mine :-)
+          """
+
         footer ->
           p ->
             text 'By '
