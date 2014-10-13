@@ -112,6 +112,8 @@ module.exports = ->
             and is made by a friend of mine :-)
           """
 
+        hr()
+
         footer ->
           p ->
             text 'By '
